@@ -35,10 +35,6 @@ public class MainPanel extends JPanel
 		this.textField = new JTextField();
 		this.enterButton = new JButton("Enter");
 		scrollPane = new JScrollPane(textArea);
-		springLayout.putConstraint(SpringLayout.NORTH, scrollPane, 80, SpringLayout.NORTH, this);
-		springLayout.putConstraint(SpringLayout.WEST, scrollPane, 0, SpringLayout.WEST, textField);
-		springLayout.putConstraint(SpringLayout.SOUTH, scrollPane, -50, SpringLayout.SOUTH, this);
-		springLayout.putConstraint(SpringLayout.EAST, scrollPane, 0, SpringLayout.EAST, enterButton);
 
 		setUpPanel();
 		setUpLayout();
@@ -69,6 +65,11 @@ public class MainPanel extends JPanel
 		springLayout.putConstraint(SpringLayout.EAST, textField, 295, SpringLayout.WEST, this);
 		springLayout.putConstraint(SpringLayout.NORTH, enterButton, -1, SpringLayout.NORTH, textField);
 		springLayout.putConstraint(SpringLayout.EAST, enterButton, -50, SpringLayout.EAST, this);
+		springLayout.putConstraint(SpringLayout.NORTH, scrollPane, 80, SpringLayout.NORTH, this);
+		springLayout.putConstraint(SpringLayout.WEST, scrollPane, 0, SpringLayout.WEST, textField);
+		springLayout.putConstraint(SpringLayout.SOUTH, scrollPane, -50, SpringLayout.SOUTH, this);
+		springLayout.putConstraint(SpringLayout.EAST, scrollPane, 0, SpringLayout.EAST, enterButton);
+
 	}
 	
 	private void setUpListeners()
